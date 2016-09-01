@@ -1,10 +1,13 @@
 "" Enigma Lee Vim Config
 
-"" Basic Settings
+""""""""""""""""""""""""""""""""""""
+""		Editor Config
+""""""""""""""""""""""""""""""""""""
+"" Basic Config
 set lines=60 columns=160
 set guioptions-=m
 set guioptions-=T
-set guioptions-=r
+set guioptions-=rL
 set nocompatible
 set nobackup
 set nu
@@ -29,21 +32,31 @@ set laststatus=2
 colorscheme gruvbox
 set background=dark
 
-"" Search Settings
+"" Search Config
 set ignorecase smartcase
 set hlsearch
 set incsearch
 
-"" Indent Settings
+"" Indent Config
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set noexpandtab
+filetype plugin on
 
+
+
+""""""""""""""""""""""""""""""""""""
+""		Plugin Config
+""""""""""""""""""""""""""""""""""""
 "" Ctags Config
 set tags+=./tags;/
 
-"" Taglist Settings
-"" git clone https://github.com/vim-scripts/taglist.vim.git
-let Tlist_Show_One_File=1    
-let Tlist_Exit_OnlyWindow=1   
+"" Tagbar Config
+"" git clone https://github.com/majutsushi/tagbar.git
+nmap <F8> :TagbarToggle<CR>
+
+"" Vim-Airline Config
+"" git clone https://github.com/vim-airline/vim-airline.git
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
