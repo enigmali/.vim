@@ -1,8 +1,12 @@
 "" Enigma Lee Vim Config
 
 "" Basic Settings
-set lines=72 columns=200
+set lines=60 columns=160
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
 set nocompatible
+set nobackup
 set nu
 set ruler
 execute pathogen#infect()
