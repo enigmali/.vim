@@ -42,3 +42,8 @@ set noexpandtab
 
 "" Ctags Config
 set tags+=./tags;/
+
+"" Taglist Settings
+"" git clone https://github.com/vim-scripts/taglist.vim.git
+let Tlist_Show_One_File=1    
+let Tlist_Exit_OnlyWindow=1   
