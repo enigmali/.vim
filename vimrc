@@ -24,7 +24,10 @@ set showcmd
 set laststatus=2
 
 "" git clone https://github.com/nanotech/jellybeans.vim.git
-colorscheme jellybeans
+"" colorscheme jellybeans
+"" git clone https://github.com/morhetz/gruvbox.git
+colorscheme gruvbox
+set background=dark
 
 "" Search Settings
 set ignorecase smartcase
