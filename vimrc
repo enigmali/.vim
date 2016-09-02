@@ -12,6 +12,7 @@ set nocompatible
 set nobackup
 set nu
 set ruler
+let mapleader=" "
 
 "" git clone https://github.com/tpope/vim-pathogen.git
 execute pathogen#infect()
@@ -54,7 +55,7 @@ set tags+=./tags;/
 
 "" Tagbar Config
 "" git clone https://github.com/majutsushi/tagbar.git
-nmap <F8> :TagbarToggle<CR>
+nmap <leader><F8> :TagbarToggle<CR>
 
 "" Vim-Airline Config
 "" git clone https://github.com/vim-airline/vim-airline.git
