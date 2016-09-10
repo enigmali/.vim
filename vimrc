@@ -55,6 +55,7 @@ set tags+=./tags;/
 
 "" Tagbar Config
 "" git clone https://github.com/majutsushi/tagbar.git
+"" git clone https://github.com/dkprice/vim-easygrep.git
 nmap <leader><F8> :TagbarToggle<CR>
 
 "" Vim-Airline Config
