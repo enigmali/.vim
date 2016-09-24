@@ -4,10 +4,13 @@
 ""		Editor Config
 """"""""""""""""""""""""""""""""""""
 "" Basic Config
-set lines=60 columns=160
-set guioptions-=m
-set guioptions-=T
-set guioptions-=rL
+if has("gui_running")
+	set lines=72 columns=224
+	set guioptions-=m
+	set guioptions-=T
+	set guioptions-=rL
+endif
+
 set nocompatible
 set nobackup
 set nu
