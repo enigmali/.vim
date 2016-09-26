@@ -5,7 +5,7 @@
 """"""""""""""""""""""""""""""""""""
 "" Basic Config
 if has("gui_running")
-	set lines=72 columns=224
+	set lines=62 columns=200
 	set guioptions-=m
 	set guioptions-=T
 	set guioptions-=rL
@@ -46,7 +46,9 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set noexpandtab
-filetype plugin on
+filetype plugin indent on
+set autoindent
+set smartindent
 
 
 
