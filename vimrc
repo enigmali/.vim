@@ -5,7 +5,7 @@
 """"""""""""""""""""""""""""""""""""
 "" Basic Config
 if has("gui_running")
-	set lines=62 columns=200
+	set lines=99 columns=300 "" Full Screen
 	set guioptions-=m
 	set guioptions-=T
 	set guioptions-=rL
@@ -31,10 +31,10 @@ set showcmd
 set laststatus=2
 
 "" git clone https://github.com/nanotech/jellybeans.vim.git
-"" colorscheme jellybeans
+colorscheme jellybeans
 "" git clone https://github.com/morhetz/gruvbox.git
-colorscheme gruvbox
-set background=dark
+"" colorscheme gruvbox
+"" set background=dark
 
 "" Search Config
 set ignorecase smartcase
@@ -60,10 +60,20 @@ set tags+=./tags;/
 
 "" Tagbar Config
 "" git clone https://github.com/majutsushi/tagbar.git
-"" git clone https://github.com/dkprice/vim-easygrep.git
 nmap <leader><F8> :TagbarToggle<CR>
+
+"" git clone https://github.com/dkprice/vim-easygrep.git
 
 "" Vim-Airline Config
 "" git clone https://github.com/vim-airline/vim-airline.git
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
+let g:airline_theme='raven'
+
+"" UltiSnips Config
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="normal"
