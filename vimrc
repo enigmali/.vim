@@ -1,4 +1,4 @@
-"" Enigma Lee Vim Config
+"" Enigma Li Vim Config
 
 """"""""""""""""""""""""""""""""""""
 ""		Editor Config
@@ -15,7 +15,6 @@ set nocompatible
 set nobackup
 set nu
 set ruler
-let mapleader=" "
 
 "" git clone https://github.com/tpope/vim-pathogen.git
 execute pathogen#infect()
@@ -29,12 +28,6 @@ set cursorline
 set scrolloff=3
 set showcmd
 set laststatus=2
-
-"" git clone https://github.com/nanotech/jellybeans.vim.git
-colorscheme jellybeans
-"" git clone https://github.com/morhetz/gruvbox.git
-"" colorscheme gruvbox
-"" set background=dark
 
 "" Search Config
 set ignorecase smartcase
@@ -50,30 +43,51 @@ filetype plugin indent on
 set autoindent
 set smartindent
 
+"" Key Binding
+let mapleader=" "
+
+nmap <C-Tab>	:bn<CR>
+nmap <C-S-Tab>	:bp<CR>
+nmap <C-K>		:bd<CR>
+nmap <C-S-L>	:ls<CR>
 
 
 """"""""""""""""""""""""""""""""""""
 ""		Plugin Config
 """"""""""""""""""""""""""""""""""""
+"" Color Scheme Sonfig
+colorscheme spacevim
+
 "" Ctags Config
 set tags+=./tags;/
 
 "" Tagbar Config
 "" git clone https://github.com/majutsushi/tagbar.git
+autocmd VimEnter * nested :TagbarOpen
 nmap <leader><F8> :TagbarToggle<CR>
-
-"" git clone https://github.com/dkprice/vim-easygrep.git
 
 "" Vim-Airline Config
 "" git clone https://github.com/vim-airline/vim-airline.git
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '◀'
+let g:airline_left_sep='▶'
+let g:airline_right_sep='◀'
 let g:airline_theme='raven'
 
 "" UltiSnips Config
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsListSnippets="<c-tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger		="<tab>"
+let g:UltiSnipsListSnippets			="<c-tab>"
+let g:UltiSnipsJumpForwardTrigger	="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger	="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="normal"
+let g:UltiSnipsEditSplit			="normal"
+
+"" CtrlP Config
+let g:ctrlp_map = "<c-p>"
+let g:ctrlp_cmd = "CtrlP"
+let g:ctrlp_custom_ignore = "\v[\/]\.(git|hg|svn)$"
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll|a|o)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+
