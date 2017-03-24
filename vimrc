@@ -65,6 +65,9 @@ if has("gui_running")
 	"" Tagbar Config
 	"" git clone https://github.com/majutsushi/tagbar.git
 	autocmd VimEnter * nested :TagbarOpen
+	let g:tagbar_left	= 1
+	let g:tagbar_width	= 24
+	let g:tagbar_indent = 0
 	nmap <leader><F8> :TagbarToggle<CR>
 
 	"" Vim-Airline Config
@@ -78,11 +81,11 @@ if has("gui_running")
 	"" git clone https://github.com/SirVer/ultisnips.git
 	"" git clone https://github.com/honza/vim-snippets.git
 	let g:UltiSnipsExpandTrigger		="<tab>"
-	let g:UltiSnipsListSnippets		="<c-tab>"
+	let g:UltiSnipsListSnippets			="<c-tab>"
 	let g:UltiSnipsJumpForwardTrigger	="<c-b>"
 	let g:UltiSnipsJumpBackwardTrigger	="<c-z>"
 	" If you want :UltiSnipsEdit to split your window.
-	let g:UltiSnipsEditSplit		="normal"
+	let g:UltiSnipsEditSplit			="normal"
 
 	"" CtrlP Config
 	"" git clone https://github.com/kien/ctrlp.vim.git
