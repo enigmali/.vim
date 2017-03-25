@@ -62,13 +62,8 @@ if has("gui_running")
 	"" Ctags Config
 	set tags+=./tags;/
 
-	"" Tagbar Config
-	"" git clone https://github.com/majutsushi/tagbar.git
-	autocmd VimEnter * nested :TagbarOpen
-	let g:tagbar_left	= 1
-	let g:tagbar_width	= 24
-	let g:tagbar_indent = 0
-	nmap <leader><F8> :TagbarToggle<CR>
+	"" EasyGrep
+	"" git clone https://github.com/dkprice/vim-easygrep.git
 
 	"" Vim-Airline Config
 	"" git clone https://github.com/vim-airline/vim-airline.git
