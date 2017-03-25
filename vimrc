@@ -64,6 +64,8 @@ if has("gui_running")
 
 	"" EasyGrep
 	"" git clone https://github.com/dkprice/vim-easygrep.git
+	"" let g:EasyGrepOpenWindowOnMatch=1
+	let g:EasyGrepJumpToMatch=0
 
 	"" Vim-Airline Config
 	"" git clone https://github.com/vim-airline/vim-airline.git
