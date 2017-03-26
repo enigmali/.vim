@@ -4,18 +4,12 @@
 ""		Editor Config
 """"""""""""""""""""""""""""""""""""
 "" Basic Config
-if has("gui_running")
-	set lines=99 columns=300 "" Full Screen
-	set guioptions-=m
-	set guioptions-=T
-	set guioptions-=rL
-endif
-
 set nocompatible
 set nobackup
 set nu
 set ruler
 
+"" Pathogen Config
 "" git clone https://github.com/tpope/vim-pathogen.git
 execute pathogen#infect()
 
@@ -23,7 +17,6 @@ syntax on
 set confirm
 set cmdheight=2
 set showmatch
-set cursorline
 
 set scrolloff=3
 set showcmd
@@ -53,20 +46,46 @@ nmap <C-S-L>	:ls<CR>
 
 
 """"""""""""""""""""""""""""""""""""
-""		Plugin Config
+""		GUI && Plugin Config
 """"""""""""""""""""""""""""""""""""
+"" Ctags Config
+set tags+=./tags;/
+
+"" EasyGrep Config
+"" git clone https://github.com/dkprice/vim-easygrep.git
+"" let g:EasyGrepOpenWindowOnMatch=1
+let g:EasyGrepJumpToMatch=0
+
+"" UltiSnips Config
+"" git clone https://github.com/SirVer/ultisnips.git
+"" git clone https://github.com/honza/vim-snippets.git
+let g:UltiSnipsExpandTrigger		="<tab>"
+let g:UltiSnipsListSnippets			="<c-tab>"
+let g:UltiSnipsJumpForwardTrigger	="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger	="<c-z>"
+"" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit			="normal"
+
+"" CtrlP Config
+"" git clone https://github.com/kien/ctrlp.vim.git
+let g:ctrlp_map = "<c-p>"
+let g:ctrlp_cmd = "CtrlP"
+let g:ctrlp_custom_ignore = "\v[\/]\.(git|hg|svn)$"
+
+
 if has("gui_running")
+	"" Window Config
+	set lines=73 columns=196 "" Full Screen
+	set guioptions-=m
+	set guioptions-=T
+	set guioptions-=rL
+
+	"" Editor config
+	set cursorline
+	
 	"" Color Scheme Sonfig
 	colorscheme spacevim
-
-	"" Ctags Config
-	set tags+=./tags;/
-
-	"" EasyGrep
-	"" git clone https://github.com/dkprice/vim-easygrep.git
-	"" let g:EasyGrepOpenWindowOnMatch=1
-	let g:EasyGrepJumpToMatch=0
-
+	
 	"" Vim-Airline Config
 	"" git clone https://github.com/vim-airline/vim-airline.git
 	"" git clone https://github.com/vim-airline/vim-airline-themes.git
@@ -74,19 +93,7 @@ if has("gui_running")
 	let g:airline_right_sep='◀'
 	let g:airline_theme='raven'
 
-	"" UltiSnips Config
-	"" git clone https://github.com/SirVer/ultisnips.git
-	"" git clone https://github.com/honza/vim-snippets.git
-	let g:UltiSnipsExpandTrigger		="<tab>"
-	let g:UltiSnipsListSnippets			="<c-tab>"
-	let g:UltiSnipsJumpForwardTrigger	="<c-b>"
-	let g:UltiSnipsJumpBackwardTrigger	="<c-z>"
-	" If you want :UltiSnipsEdit to split your window.
-	let g:UltiSnipsEditSplit			="normal"
-
-	"" CtrlP Config
-	"" git clone https://github.com/kien/ctrlp.vim.git
-	let g:ctrlp_map = "<c-p>"
-	let g:ctrlp_cmd = "CtrlP"
-	let g:ctrlp_custom_ignore = "\v[\/]\.(git|hg|svn)$"
+	else
+	"" Turn of vim-airline
+	let g:loaded_airline = 1 
 endif
