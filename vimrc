@@ -75,7 +75,7 @@ let g:ctrlp_custom_ignore = "\v[\/]\.(git|hg|svn)$"
 
 if has("gui_running")
 	"" Window Config
-	set lines=72 columns=192 "" Full Screen
+	set lines=73 columns=196 "" Full Screen
 	set guioptions-=m
 	set guioptions-=T
 	set guioptions-=rL
