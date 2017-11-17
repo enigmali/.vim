@@ -1,1 +1,1 @@
-# .vim
+# my vim config
