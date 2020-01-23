@@ -74,7 +74,7 @@ let g:UltiSnipsEditSplit			="normal"
 "" git clone https://github.com/kien/ctrlp.vim.git
 let g:ctrlp_map = "<c-p>"
 let g:ctrlp_cmd = "CtrlP"
-let g:ctrlp_custom_ignore = "\v[\/]\.(git|hg|svn)$"
+let g:ctrlp_custom_ignore = "\v[\/]\.(git|hg|svn|tags)$"
 
 if has("gui_running")
 	"" Window Config
@@ -84,6 +84,8 @@ if has("gui_running")
 	set guioptions-=rL
 	set encoding=utf-8
 
+	"" Font Config
+	set guifont=Monospace\ 10
 	"" Editor config
 	set cursorline
 
